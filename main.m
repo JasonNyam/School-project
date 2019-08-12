@@ -14,8 +14,8 @@ for K=1:20
     scores=[scores;precAtK(K,V,Gt)];
 end
 plot(scores);
-[~,K]=max(scores);
-score=precAtK(K,V,Gt);
+[score,K]=max(scores);
+
 
 % Search by similarity
 [x,Fs]=audioread('bent_music.wav');
